@@ -6,26 +6,284 @@
         <title>Life, the Universe and Everything</title>
     </head>
     <body>
-        <div class="sidebar">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../technology.html">Technology</a></li>
-                <li>My keyboard journey</li>
-            </ul>
-        </div>
-        <div class="topbar">
-            <a href="../index.html">Home</a> | <a href="../technology.html">Technology</a> | My keyboard journey
-        </div>
+        <header>
+            <a href="index.html">Home</a>
+            <hr>
+        </header>
         <div class="main">
             <article>
-                <h1>The art of typing quickly</h1>
+                <h1>To build a keyboard</h1>
+                <h2>The problem with normal keyboards</h2>
                 <p>
-                    I started out learning to touch type on a regular old qwerty-iso keyboard like any other sane human being
-                    (I promise this is relevant for context). But being the idiot I am, soon after discovering that there are more layouts than
-                    what is printed on the keycaps of the keyboard I decided to learn to type on a Dvorak keyboard instead. If I recall correctly
-                    I reached the same speeds as on qwerty in a matter of weeks, this has definetly helped later on.
+                    Soon after I had learnt to touch type started feeling the consequences of typing quickly.
+                    I got pain in my wrists, by only typing very little because there are obviously people who type more than me and they're fine.
+                    I might just be more susceptible to wrist injuries than others or something but I felt I had to do something about it.
                 </p>
+                <h2>Custom keyboard formfactors</h2>
+                <p>
+                    The first keyboard I built was a Corne-Cherry from a kit I bought online.
+                    It included Glorious panda switches I lubed up myself as well as two pro-micro controllers.
+                    While that keyboard was largely fine to type on, the switches were especially good compared to normal cherry reds.
+                    I still felt part of the same issues as on the qwerty keyboard. Note here is that I used the dvorak layout on both.
+                    The fact that it was a split keyboard definetly helped avoid the awkward angle you get on a normal keyboard and thumb keys
+                    are great for speed. But the main issue is for one that it is so high so you get a different bend, this could be solved with
+                    a simple wristrest but then I need to carry that around too. And in addition to that it still had too many keys on each finger
+                    which leads to strain on weak fingers like the pinky
+                </p>
+
+                <h2>The final form</h2>
+                <p>
+                    After that partially failed venture I decided to go even smaller and built the tiny-18 which, descriptively, has 18 keys over 2
+                    wireless halves. Built using a custom printed PCB from jlcpcb which I made in keycadand 2 nicenano controllers with one 100mAh battery each,                           that lasts me a couple of days per charge. The keys are also different, low profile khail choc v1 black keys this time. They're
+                    super nice to type on, maybe a bit on the heavy side, should have gotten the 45g switches instead but oh well. I lubed those too
+                    and did a tape mod, very time consuming but easy with so few keys and definetly worth it for the nice sound they have now.
+                </p>
+                <img src="keyboard.JPG" alt="Image of keyboard" height="500" class="center">
+                <h3>The layout on this</h3>
+                <p>
+                    Of course the dvorak layout did not fit on an 18 key keyboard so you have to get a bit creative. I did not come up with the alpha-layers
+                    myself but stole them from <a href="https://github.com/benvallack">Ben Vallack</a> which made a similar one with only 16 keys.
+                    He is also where the idea came from. The tiny-18 uses the ISRT layout modified to include all the most common keys on the top alpha layer,
+                    so not much.
+                </p>
+
+                You have to get creative with the keys so there are many functionalities on one key<br>
+                Meaning: hold | tap <br>
+                Meaning: &(goto Alpha 1) &AL1<br>
+                <h4>Alpha 1</h4>
+                <table>
+                    <tr>
+                        <td> </td>
+                        <td>&NUM | S</td>
+                        <td>R</td>
+                        <td>T</td>
+
+                        <td>N</td>
+                        <td>E</td>
+                        <td>&BRC | A</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>CTRL | I</td>
+                        <td>&WSP | L</td>
+                        <td>G</td>
+                        <td>D</td>
+
+                        <td>H</td>
+                        <td>U</td>
+                        <td>&NAV | O</td>
+                        <td>&SY1 | C</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Super</td>
+                        <td>Shift | BSPC</td>
+
+                        <td>&AL2</td>
+                        <td>&MOD | Enter</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <h4>Alpha 2</h4>
+                The second escape here is redundant, could improve by putting something more useful there but then it does not match the first layer
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>J</td>
+                        <td>P</td>
+                        <td>K</td>
+
+                        <td>B</td>
+                        <td>.</td>
+                        <td>X</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CTRL | Q</td>
+                        <td>V</td>
+                        <td>W</td>
+                        <td>M</td>
+
+                        <td>F</td>
+                        <td>,</td>
+                        <td>Z</td>
+                        <td>RALT | Y</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Super | Esc</td>
+                        <td>Shift | BSPC</td>
+
+                        <td>&NUM | Del</td>
+                        <td>Esc</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                Here the following layers are made for vim and programming mainly,
+                especially the symbol layout is made for logical vim commands
+                <h4>Symbol 1</h4>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>@</td>
+                        <td>'</td>
+                        <td>^</td>
+
+                        <td>$</td>
+                        <td>-</td>
+                        <td>=</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>&</td>
+                        <td>#</td>
+                        <td>*</td>
+
+                        <td>/</td>
+                        <td>\</td>
+                        <td>%</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Super</td>
+                        <td>Shift | Space</td>
+
+                        <td>&Num | Del</td>
+                        <td>RCTRL</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <h4>Bracket</h4>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>;</td>
+                        <td>[</td>
+                        <td>(</td>
+
+                        <td>)</td>
+                        <td>]</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>{</td>
+                        <td>:</td>
+                        <td>`</td>
+                        <td>~</td>
+
+                        <td>Tab</td>
+                        <td></td>
+                        <td></td>
+                        <td>}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Super</td>
+                        <td>Shift | BSPC</td>
+
+                        <td>&AL2</td>
+                        <td>&MOD | Enter</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <h4>Modifier</h4>
+                Meaning: .Key => modifier key activates during next normal keycombination<br>
+                The arrow keys are placed like this to be used in vim instead of HJKL (I know what a sin, but you can't fit both HJKL and arrow keys on this thing)
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>Home</td>
+                        <td>.LALT</td>
+                        <td>Del</td>
+
+                        <td>Left</td>
+                        <td>Down</td>
+                        <td>Up</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Ins</td>
+                        <td>End</td>
+                        <td>PG_Down</td>
+                        <td>PG_Up</td>
+
+                        <td>Tab</td>
+                        <td></td>
+                        <td></td>
+                        <td>Right</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Super</td>
+                        <td>Shift | Space</td>
+
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <h4>Number</h4>
+                Also a version of this (WSP) that is the same, but with the mod key always held down to quickly change workspaces
+                <table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>2</td>
+                        <td>3</td>
+
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>4</td>
+                        <td>5</td>
+
+                        <td>6</td>
+                        <td>.</td>
+                        <td>,</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Super</td>
+                        <td>Shift | BSPC</td>
+
+                        <td>&AL2</td>
+                        <td>&MOD | Enter</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
             </article>
         </div>
+        <footer>
+            <hr>
+            made with litteral caveman<sup><small>TM</small></sup> technology in 2024<br>
+            <br>
+            no contact info because you should not contact me you fuck, go outside<br>
+        </footer>
     </body>
 </html>
