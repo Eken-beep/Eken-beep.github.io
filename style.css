@@ -1,0 +1,66 @@
+body {
+    background-color: #181825;
+    color: #cdd6f4;
+    border-color: #b4befe;
+    accent-color: #b4befe;
+
+    font-size: 18px;
+    font-family: system-ui, -apple-system, Roboto, Ubuntu, Cantarell;
+}
+
+a {
+    color: #b4befe;
+}
+
+div.main {
+    background-color: #1e1e2e;
+    width: 1200px;
+    margin:auto;
+    padding:1%;
+    border-radius: 10px;
+}
+
+div.sidebar {
+    width: 10%;
+    float:left;
+    background-color: #1e1e2e;
+    padding-left: 2%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+div.topbar {
+    display:none;
+}
+@media (max-width: 1700px) {
+    body {
+        background-color: #1e1e2e;
+    }
+    div.main {
+        width: 100%;
+        padding: 0%;
+        border-radius: 0px;
+    }
+
+    div.sidebar {
+        display:none;
+    }
+    div.topbar {
+        display:contents;
+    }
+}
+
+h1.header {
+    background-color: #1e1e2e;
+}
+
+table {
+    background-color: #313244;
+    border-color: #11111b;
+    border-width: 2px;
+    align-items: left;
+    align-self: center;
+}
+
+td, th {
+    padding: 5px;
+}
