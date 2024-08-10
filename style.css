@@ -31,6 +31,9 @@ div.main {
     div.main {
         width: 100%;
         border-radius: 0px;
+        border-width: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
@@ -67,6 +70,15 @@ footer {
 
 hr {
     color: #b4befe;
+}
+
+pre.hello {
+    text-align: center;
+}
+@media (max-width: 800px) {
+    pre.hello {
+        display: none;
+    }
 }
 
 img.center {
